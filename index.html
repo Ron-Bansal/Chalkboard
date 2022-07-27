@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chalkboard</title>
+
+    <link rel="icon" href="./assets/fluent_cursor-24-black.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="theme-dark">
+    <header>
+      <h1>chalkboard</h1>
+      <div class="icons">
+        <div class="theme-block">
+          <input type="checkbox" name="theme" id="theme" />
+          <label for="theme"></label>
+        </div>
+
+        <button id="settings">settings</button>
+      </div>
+    </header>
+
+    <div class="settings-modal">
+      <div class="setting-option">
+        <p>light-theme fg:</p>
+        <input type="color" id="light-theme-fg-col" />
+      </div>
+
+      <div class="setting-option">
+        <p>light-theme bg:</p>
+        <input type="color" id="light-theme-bg-col" />
+      </div>
+
+      <div class="setting-option">
+        <p>dark-theme fg:</p>
+        <input type="color" id="dark-theme-fg-col" />
+      </div>
+
+      <div class="setting-option">
+        <p>dark-theme bg:</p>
+        <input type="color" id="dark-theme-bg-col" />
+      </div>
+
+      <div class="setting-option">
+        <p>font size:</p>
+        <div>
+          <input type="radio" id="font-s" name="font-s" value="font-s" />
+          <!-- <label for="font-s">1</label> -->
+          <input
+            type="radio"
+            id="font-m"
+            name="font-m"
+            value="font-m"
+            checked
+          />
+          <!-- <label for="font-m">2</label> -->
+          <input type="radio" id="font-l" name="font-l" value="font-l" />
+          <!-- <label for="font-l">3</label> -->
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="draggable" id="time">12:34</div>
+      <!-- 
+      <div class="note draggable">
+        <div class="frame">
+          <span class="colour-tag"></span>
+          <span class="cross">x</span>
+        </div>
+        <textarea
+          class="textbox"
+          name="note"
+          id="note1"
+          cols="30"
+          wrap="soft"
+          spellcheck="false"
+        >
+watch compsci lectures</textarea
+        >
+      </div>
+
+      <div class="note draggable">
+        <div class="frame">
+          <span class="colour-tag"></span>
+          <span class="cross">x</span>
+        </div>
+        <textarea class="textbox" wrap="soft" spellcheck="false">
+watch compsci lectures</textarea
+        >
+      </div> -->
+
+      <!-- <div id="drag-1" class="draggable">
+        <p>1</p>
+      </div>
+      <div id="drag-2" class="draggable">
+        <p>2</p>
+      </div> -->
+
+      <!-- <div id="drag-1" class="movable-box draggable">
+        <div id="drag-3" class="drag-handle " />
+        Content
+        <div class="resize-handle" />
+      </div> -->
+
+      <div class="note">
+        <div class="frame">
+          <span class="colour-tag"></span>
+          <span class="cross" onclick="remove(this)">x</span>
+        </div>
+        <textarea
+          class="textbox"
+          name="note"
+          id="textbox"
+          wrap="soft"
+          autoresize
+          spellcheck="false"
+        >
+watch mon + tue  CompSci lectures</textarea
+        >
+      </div>
+
+      <!-- <textarea autoresize>Type here and I’ll resize.</textarea> -->
+    </main>
+
+    <!--oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+ -->
+
+    <footer>
+      <button id="add-note">+ add note</button>
+      <button id="hide-notes">hide all notes</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
