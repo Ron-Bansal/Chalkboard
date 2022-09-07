@@ -187,7 +187,10 @@ const addNoteBtn = document.querySelector("#add-note");
 let closeNoteSpans = document.querySelectorAll(".cross");
 
 addNoteBtn.addEventListener("click", () => {
-  console.log("deprecated");
+  // console.log("deprecated");
+  let x_pos = window.innerWidth / 2 - 170;
+  let y_pos = window.innerHeight / 2 - 90;
+  createNoteAtPos(x_pos, y_pos);
 });
 
 for (closeNote of closeNoteSpans) {
@@ -233,7 +236,7 @@ function autoresize() {
 //   if (textArea.value == "- ") {
 //     textArea.value = "\t• ";
 //   }
-  
+
 //   if ((textArea.value).slice(-3) == "\n- ") {
 //     console.log("new line");
 //     textArea.value = textArea.value.slice(0, -2) + "\t• ";
@@ -266,4 +269,3 @@ function autoresize() {
 //       this.selectionEnd = start + 1;
 //   }
 // });
-

@@ -59,17 +59,16 @@ theme.addEventListener("click", () => {
 //   }
 
 // target elements with the "draggable" class
-interact('.movable-box')
+interact(".movable-box")
   .draggable({
-    allowFrom: '.drag-handle',
+    allowFrom: ".drag-handle",
   })
   .resizable({
-    allowFrom: '.resize-handle',
+    allowFrom: ".resize-handle",
   })
   .pointerEvents({
-    allowFrom: '*',
-  })
-
+    allowFrom: "*",
+  });
 
 interact(".draggable").draggable({
   // enable inertial throwing
@@ -105,16 +104,16 @@ interact(".draggable").draggable({
   },
 });
 
-interact('.movable-box')
+interact(".movable-box")
   .draggable({
-    allowFrom: '.drag-handle',
+    allowFrom: ".drag-handle",
   })
   .resizable({
-    allowFrom: '.resize-handle',
+    allowFrom: ".resize-handle",
   })
   .pointerEvents({
-    allowFrom: '*',
-  })
+    allowFrom: "*",
+  });
 
 function dragMoveListener(event) {
   var target = event.target;

@@ -211,7 +211,7 @@ footer {
     cursor: grabbing;
 } */
 
-.colour-tag {
+.colour-tag-DISABLEDFORNOW {
     height: 12px;
     width: 12px;
     /* padding: 5px; */
@@ -260,6 +260,11 @@ footer {
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
     padding-top: 10px;
+    padding-left: 10px;
+}
+
+.og-textbox {
+    margin-bottom: 10px !important;
 }
 
 .content {
